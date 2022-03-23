@@ -1,0 +1,22 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background: #ccc;
+}
+.container{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+img{
+    height: 30rem;
+    cursor: pointer;
+    filter: grayscale(100%);
+    transition: .5s;
+}
+img:hover{
+    filter: grayscale(0%);
+}

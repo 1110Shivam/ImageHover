@@ -1,0 +1,60 @@
+@import url("https://fonts.googleapis.com/css2?family=Courgette&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background: #cbd3de;
+}
+.container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  overflow: hidden;
+  cursor: pointer;
+}
+.img {
+  width: 450px;
+  height: 350px;
+  transition: 0.3s;
+}
+.one {
+  background: url("Img\\bmw.jpg") center / cover;
+  z-index: -1;
+  transform: translateX(200px);
+  clip-path: polygon(0% 0%, 50% 0, 65% 50%, 50% 100%, 0% 100%);
+}
+.two {
+  background: url("Img\\bmw.jpg") center / cover;
+  transform: translateX(-250px);
+  clip-path: polygon(50% 0, 100% 0%, 100% 100%, 50% 100%, 65% 50%);
+}
+.text {
+  position: absolute;
+  right: 39%;
+  top: 30%;
+  width: 0;
+  height: 150px;
+  background: #cbd3de;
+  transition: 0.2s ease;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  font-family: "Courgette", cursive;
+  padding: 1rem 0.5rem;
+}
+.text p {
+  color: #000;
+  margin: 0.5rem 0;
+}
+.container:hover .one {
+  transform: translateX(150px);
+}
+.container:hover .two {
+  transform: translateX(-200px);
+}
+.container:hover .text {
+  width: 280px;
+}
